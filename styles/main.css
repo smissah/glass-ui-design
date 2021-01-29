@@ -1,6 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=Ubuntu:wght@300;400;500;700&display=swap");
+.circle:nth-child(1) {
+  position: absolute;
+  z-index: -1000;
+  background: rgba(255, 255, 255, 0.445);
+  width: 300px;
+  height: 300px;
+  right: 15%;
+  top: 5%;
+  border-radius: 50%;
+  backdrop-filter: blur(200px);
+}
+
+.circle:nth-child(2) {
+  position: absolute;
+  z-index: -1000;
+  background: rgba(255, 255, 255, 0.5);
+  width: 500px;
+  height: 500px;
+  left: 10%;
+  bottom: -10%;
+  border-radius: 50%;
+  backdrop-filter: blur(200px);
+}
+
 html {
+  font-family: "Ubuntu", sans-serif;
   height: 100%;
   --radius: 35px;
+  font-size: 62.5%;
+  --marginSmall: 1rem;
+  --marginMedium: 1.8rem;
+  --marginLarge: 2.5rem;
+  --marginXLarge: 3.5rem;
+  --marginXXLarge: 4.5rem;
+  --paddingSmall: 1rem;
+  --paddingMedium: 1.8rem;
+  --paddingLarge: 2.5rem;
+  --paddingXLarge: 3.5rem;
+  --paddingXXLarge: 4.5rem;
+  --clrPara: rgb(74, 108, 146);
+  --bgGradient: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
 
 *,
@@ -11,32 +54,146 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 body {
+  align-items: center;
   display: grid;
   height: 100vh;
-  background: #72e7eb;
+  background: #eeaeca;
+  background: var(--bgGradient);
   place-items: center;
-  align-items: center;
+  font-size: 1.6rem;
 }
 
 .container {
+  position: relative;
   display: flex;
   width: 1000px;
   height: 80vh;
-  background: rgba(168, 92, 92, 0.281);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.281);
+  backdrop-filter: blur(500px);
   border-radius: var(--radius);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
 }
 
-aside {
+.container aside {
+  color: var(--clrPara);
+  width: 35%;
   align-items: center;
-  background: #747474;
+  background: rgba(253, 253, 253, 0.404);
+  backdrop-filter: blur(500px);
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.container aside .profile {
+  margin-top: var(--marginLarge);
+  margin-bottom: var(--marginXLarge);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container aside .profile img {
+  margin-bottom: var(--marginSmall);
+}
+
+.container aside .profile h2 {
+  margin-bottom: var(--marginSmall);
+  font-weight: 600;
+}
+
+.container aside .menu {
+  filter: contrast(-100);
+  opacity: 0.7;
+  margin-top: -2rem;
+}
+
+.container aside .menu li {
+  display: flex;
+  padding-bottom: var(--paddingXLarge);
+}
+
+.container aside .menu li img {
+  margin-right: var(--marginLarge);
+}
+
+.container aside .advert {
+  position: relative;
+  width: 80%;
+  height: 150px;
+  background: var(--bgGradient);
+  margin-bottom: var(--marginXXLarge);
+  border-radius: var(--radius);
+  display: flex;
+  padding: var(--paddingLarge) auto;
+}
+
+.container aside .advert h3 {
+  color: white;
+  width: 50%;
+  position: absolute;
+  transform: translateY(40%);
+  margin-left: var(--marginLarge);
+}
+
+.container aside .advert img {
+  position: absolute;
+  width: 40%;
+  right: 0;
+  transform: translateY(35%);
+  margin-right: var(--marginMedium);
+}
+
+.container .main {
+  background-color: none !important;
+  width: 100%;
+}
+
+.container .main .main-header {
+  background-color: rgba(255, 28, 28, 0.034);
+  height: 25%;
+}
+
+.container .main .gameslist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: none !important;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 74%;
+  height: 75%;
+  padding-top: 6rem;
+}
+
+.container .main .gameslist .game {
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #fff;
+  height: 100px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.container .main .gameslist .game img {
+  width: 80px;
+  height: 80px;
+}
+
+.container .main .gameslist .game .completion {
+  width: 100%;
+  background: rgba(255, 192, 203, 0.363);
+  height: 30px;
 }
 /*# sourceMappingURL=main.css.map */

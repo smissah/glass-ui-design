@@ -1,0 +1,23 @@
+.circle:nth-child(1) {
+  position: absolute;
+  z-index: -1000;
+  background: rgba(255, 255, 255, 0.445);
+  width: 300px;
+  height: 300px;
+  right: 15%;
+  top: 5%;
+  border-radius: 50%;
+  backdrop-filter: blur(200px);
+}
+.circle:nth-child(2) {
+  position: absolute;
+  z-index: -1000;
+  background: rgba(255, 255, 255, 0.5);
+  width: 500px;
+  height: 500px;
+  left: 10%;
+  bottom: -10%;
+  border-radius: 50%;
+  backdrop-filter: blur(200px);
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=Ubuntu:wght@300;400;500;700&display=swap");

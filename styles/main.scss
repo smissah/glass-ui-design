@@ -1,6 +1,35 @@
+@import "./styleGuide";
+
 html {
+  font-family: "Ubuntu", sans-serif;
   height: 100%;
   --radius: 35px;
+  font-size: 62.5%;
+
+  //!margins
+
+  --marginSmall: 1rem;
+  --marginMedium: 1.8rem;
+  --marginLarge: 2.5rem;
+  --marginXLarge: 3.5rem;
+  --marginXXLarge: 4.5rem;
+
+  //!paddings
+
+  --paddingSmall: 1rem;
+  --paddingMedium: 1.8rem;
+  --paddingLarge: 2.5rem;
+  --paddingXLarge: 3.5rem;
+  --paddingXXLarge: 4.5rem;
+
+  //!colours
+  --clrPara: rgb(74, 108, 146);
+
+  --bgGradient: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
 
 *,
@@ -11,30 +40,148 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 body {
+  align-items: center;
   display: grid;
   height: 100vh;
-  background: rgb(114, 231, 235);
+  background: rgb(238, 174, 202);
+  background: var(--bgGradient);
   place-items: center;
-  align-items: center;
+  font-size: 1.6rem;
 }
 .container {
+  position: relative;
   display: flex;
   width: 1000px;
   height: 80vh;
-  background: rgba(168, 92, 92, 0.281);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.281);
+  backdrop-filter: blur(500px);
   border-radius: var(--radius);
-}
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
 
-aside {
-  align-items: center;
-  background: rgb(116, 116, 116);
-  border-top-left-radius: var(--radius);
-  border-bottom-left-radius: var(--radius);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  aside {
+    color: var(--clrPara);
+    width: 35%;
+    align-items: center;
+    background: rgba(253, 253, 253, 0.404);
+    backdrop-filter: blur(500px);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .profile {
+      margin-top: var(--marginLarge);
+      margin-bottom: var(--marginXLarge);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      img {
+        margin-bottom: var(--marginSmall);
+      }
+
+      h2 {
+        margin-bottom: var(--marginSmall);
+        font-weight: 600;
+      }
+    }
+
+    .menu {
+      //   filter: invert(1);
+      filter: contrast(-100);
+      opacity: 0.7;
+      margin-top: -2rem;
+      li {
+        display: flex;
+        padding-bottom: var(--paddingXLarge);
+
+        img {
+          margin-right: var(--marginLarge);
+        }
+      }
+    }
+
+    .advert {
+      position: relative;
+      width: 80%;
+      height: 150px;
+      background: var(--bgGradient);
+      margin-bottom: var(--marginXXLarge);
+      border-radius: var(--radius);
+      display: flex;
+      padding: var(--paddingLarge) auto;
+
+      h3 {
+        color: white;
+        width: 50%;
+        position: absolute;
+
+        transform: translateY(40%);
+        margin-left: var(--marginLarge);
+      }
+
+      img {
+        position: absolute;
+        width: 40%;
+        right: 0;
+        transform: translateY(35%);
+
+        margin-right: var(--marginMedium);
+      }
+    }
+  }
+
+  .main {
+    background-color: none !important;
+
+    width: 100%;
+
+    .main-header {
+      background-color: rgba(255, 28, 28, 0.034);
+      height: 25%;
+    }
+
+    .gameslist {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-color: none !important;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 74%;
+      //   width: 75%;
+      height: 75%;
+      padding-top: 6rem;
+
+      .game {
+        margin: 0 auto;
+        border-radius: 20px;
+        background-color: #fff;
+        height: 100px;
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+
+        img {
+          width: 80px;
+          height: 80px;
+        }
+
+        .completion {
+          width: 100%;
+          background: rgba(255, 192, 203, 0.363);
+          height: 30px;
+        }
+      }
+    }
+  }
 }
