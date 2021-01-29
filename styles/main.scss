@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+  --radius: 35px;
+}
+
+*,
+*::before,
+*::after {
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  background: rgb(114, 231, 235);
+  place-items: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  width: 1000px;
+  height: 80vh;
+  background: rgba(168, 92, 92, 0.281);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+}
+
+aside {
+  align-items: center;
+  background: rgb(116, 116, 116);
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
