@@ -455,8 +455,9 @@ body {
     color: var(--clrH3);
     margin-left: 8rem;
   }
-  .game .stats .platform {
-    display: none;
+  .game .stats .platform,
+  .game .stats p {
+    display: none !important;
   }
   .game .stats .completion {
     position: absolute;

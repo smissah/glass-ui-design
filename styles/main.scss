@@ -432,8 +432,9 @@ body {
         color: var(--clrH3);
         margin-left: 8rem;
       }
-      .platform {
-        display: none;
+      .platform,
+      p {
+        display: none !important;
       }
 
       .completion {
