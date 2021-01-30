@@ -50,7 +50,13 @@ body {
       align-items: center;
       text-align: center;
 
-      img {
+      .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgb(138, 138, 138);
+        background: url("../images/avatar.png");
+        // background: var(--bgGradient);
         margin-bottom: var(--marginSmall);
       }
 

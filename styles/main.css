@@ -105,7 +105,12 @@ body {
   text-align: center;
 }
 
-.container aside .profile img {
+.container aside .profile .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #8a8a8a;
+  background: url("../images/avatar.png");
   margin-bottom: var(--marginSmall);
 }
 
