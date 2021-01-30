@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="./styles/main.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Active Games</title>
   </head>
@@ -12,7 +17,7 @@
     <div class="container">
       <aside>
         <div class="profile">
-          <img src="./images/avatar.png" alt="avatar" />
+          <img src="./images/avatar2.png" alt="avatar" />
           <div class="profile-details">
             <h2>Jack Laines</h2>
             <p>Pro Member</p>
@@ -47,47 +52,50 @@
 
       <div class="main">
         <div class="main-header">
-          <title>Active Games</title>
-          <div class="searchfield" ><input type="text" placeholder="Search" />
+          <div class="main-header-content">
+            <h1>Active Games</h1>
+            <div class="search-container">
+              <input type="text" placeholder="Search" class="search-box" />
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
         </div>
         <section class="gameslist">
-
-            <ul>
-                <li>
-                    <div class="game">
-                        <img src="./images/assassins.png" alt="">
-                        <div class="stats">
-                            <h3>Assassims</h3>
-                            <p>sadad</p>
-                            <div class="completion"></div>
-                        </div>
-                        <div class="percentage"><h3>65%</h3></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="game">
-                        <img src="./images/spiderman.png" alt="">
-                        <div class="stats">
-                            <h3>Assassims</h3>
-                            <p></p>
-                            <div class="completion"></div>
-                        </div>
-                        <div class="percentage"><h3>65%</h3></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="game">
-                        <img src="./images/sackboy.png" alt="">
-                        <div class="stats">
-                            <h3>Assassims</h3>
-                            <p></p>
-                            <div class="completion"></div>
-                        </div>
-                        <div class="percentage"><h3>65%</h3></div>
-                    </div>
-                </li>
-            </ul>
-
+          <ul>
+            <li>
+              <div class="game">
+                <img src="./images/assassins.png" alt="" />
+                <div class="stats">
+                  <h3>Assassin's Creed Valhalla</h3>
+                  <p>PS5 Edition</p>
+                  <div class="completion assassin"></div>
+                </div>
+                <div class="percentage"><h3>55%</h3></div>
+              </div>
+            </li>
+            <li>
+              <div class="game">
+                <img src="./images/spiderman.png" alt="" />
+                <div class="stats">
+                  <h3>Spiderman - Miles Morales</h3>
+                  <p>PS5 Edition</p>
+                  <div class="completion spiderman"></div>
+                </div>
+                <div class="percentage"><h3>35%</h3></div>
+              </div>
+            </li>
+            <li>
+              <div class="game">
+                <img src="./images/sackboy.png" alt="" />
+                <div class="stats">
+                  <h3>Sackboy - A Big Adventure</h3>
+                  <p>PS5 Edition</p>
+                  <div class="completion sackboy"></div>
+                </div>
+                <div class="percentage"><h3>85%</h3></div>
+              </div>
+            </li>
+          </ul>
         </section>
       </div>
     </div>

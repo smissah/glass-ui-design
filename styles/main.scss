@@ -1,37 +1,5 @@
 @import "./styleGuide";
 
-html {
-  font-family: "Ubuntu", sans-serif;
-  height: 100%;
-  --radius: 35px;
-  font-size: 62.5%;
-
-  //!margins
-
-  --marginSmall: 1rem;
-  --marginMedium: 1.8rem;
-  --marginLarge: 2.5rem;
-  --marginXLarge: 3.5rem;
-  --marginXXLarge: 4.5rem;
-
-  //!paddings
-
-  --paddingSmall: 1rem;
-  --paddingMedium: 1.8rem;
-  --paddingLarge: 2.5rem;
-  --paddingXLarge: 3.5rem;
-  --paddingXXLarge: 4.5rem;
-
-  //!colours
-  --clrPara: rgb(74, 108, 146);
-
-  --bgGradient: linear-gradient(
-    90deg,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
-}
-
 *,
 *::before,
 *::after {
@@ -56,11 +24,11 @@ body {
   position: relative;
   display: flex;
   width: 1000px;
-  height: 80vh;
+  height: 90vh;
   background: rgba(255, 255, 255, 0.281);
   backdrop-filter: blur(500px);
   border-radius: var(--radius);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+  @include boxShadow;
 
   aside {
     color: var(--clrPara);
@@ -112,10 +80,12 @@ body {
       width: 80%;
       height: 150px;
       background: var(--bgGradient);
-      margin-bottom: var(--marginXXLarge);
+      opacity: 0.75;
+      margin-bottom: 11rem;
       border-radius: var(--radius);
       display: flex;
-      padding: var(--paddingLarge) auto;
+      backdrop-filter: blur(400px);
+      @include boxShadow;
 
       h3 {
         color: white;
@@ -131,7 +101,6 @@ body {
         width: 40%;
         right: 0;
         transform: translateY(35%);
-
         margin-right: var(--marginMedium);
       }
     }
@@ -139,49 +108,148 @@ body {
 
   .main {
     background-color: none !important;
-
+    position: relative;
     width: 100%;
+    height: 100%;
 
-    .main-header {
-      background-color: rgba(255, 28, 28, 0.034);
-      height: 25%;
-    }
+    // background-color: rgba(231, 37, 37, 0.863);
+  }
+  .main-header {
+    // background-color: blue !important;
+    position: relative;
+    height: 30%;
 
-    .gameslist {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      background-color: none !important;
+    .main-header-content {
       position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 74%;
-      //   width: 75%;
-      height: 75%;
-      padding-top: 6rem;
+      left: var(--paddingXXXLarge);
+      top: 6rem;
+      width: 40%;
+      // background: green;
+      h1 {
+        color: var(--clrH1);
+        letter-spacing: 0.1rem;
+        font-size: 4rem;
+        margin-bottom: var(--marginXXLarge);
+      }
 
-      .game {
-        margin: 0 auto;
-        border-radius: 20px;
-        background-color: #fff;
-        height: 100px;
-        width: 500px;
+      .search-container {
+        position: relative;
+        width: 90%;
+
+        .search-box {
+          background: rgba(255, 255, 255, 0.432);
+          height: 4rem;
+          backdrop-filter: blur(300px);
+          border-radius: var(--radius);
+          width: 100%;
+          outline: none;
+          border: none;
+          padding: 0 5rem 0 3rem;
+          color: var(--clrPara);
+        }
+        i {
+          position: absolute;
+          right: 2rem;
+          top: 50%;
+          transform: translateY(-50%);
+          color: var(--clrPara);
+        }
+      }
+    }
+  }
+  .gameslist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    // background-color: rgb(238, 255, 0) !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70%;
+    padding-top: var(----paddingMedium);
+    padding-bottom: 10rem;
+    width: 100%;
+    //   width: 75%;
+    // height: 100%;
+    // padding-bottom: 0;
+
+    .game {
+      margin-left: var(--marginXXXLarge);
+      border-radius: 25px;
+      background-color: rgba(255, 255, 255, 0.726);
+      backdrop-filter: blur(300px);
+      height: 110px;
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5rem;
+      margin-bottom: 1rem;
+      @include boxShadow;
+      img {
+        width: 80px;
+        height: 80px;
+        margin: auto 0;
+        margin-left: var(--marginLarge);
+      }
+
+      .stats {
+        width: 60%;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        margin-bottom: 5rem;
+        margin: var(--marginSmall) 0;
 
-        img {
-          width: 80px;
-          height: 80px;
+        h3 {
+          color: var(--clrH3);
+        }
+        p {
+          color: var(--clrPara);
         }
 
         .completion {
           width: 100%;
-          background: rgba(255, 192, 203, 0.363);
+          background: rgba(190, 190, 190, 0.363);
           height: 30px;
+          border-radius: var(--radius);
+        }
+
+        .assassin::before {
+          content: " ";
+          display: block;
+          width: 55%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: var(--clrHighlight);
+        }
+        .spiderman::before {
+          content: " ";
+          display: block;
+          width: 35%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: var(--clrHighlight);
+        }
+
+        .sackboy::before {
+          content: " ";
+          display: block;
+          width: 85%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: var(--clrHighlight);
         }
       }
     }
+  }
+
+  .percentage {
+    display: grid;
+    place-items: center;
+    margin-right: var(--marginLarge);
+    color: var(--clrHighlight);
   }
 }

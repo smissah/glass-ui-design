@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&family=Ubuntu:wght@300;400;500;700&display=swap");
+html {
+  font-family: "Ubuntu", sans-serif;
+  height: 100%;
+  --radius: 35px;
+  font-size: 62.5%;
+  --marginSmall: 1rem;
+  --marginMedium: 1.8rem;
+  --marginLarge: 2.5rem;
+  --marginXLarge: 3.5rem;
+  --marginXXLarge: 4.5rem;
+  --paddingXXXLarge: 6.5rem;
+  --paddingSmall: 1rem;
+  --paddingMedium: 1.8rem;
+  --paddingLarge: 2.5rem;
+  --paddingXLarge: 3.5rem;
+  --paddingXXLarge: 4.5rem;
+  --marginXXXLarge: 6.5rem;
+  --clrPara: rgb(102, 138, 180);
+  --clrH1: rgb(68, 95, 124);
+  --clrH3: rgb(68, 95, 124);
+  --clrHighlight: rgb(107, 171, 197);
+  --bgGradient: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
 .circle:nth-child(1) {
   position: absolute;
   z-index: -1000;
@@ -21,29 +49,6 @@
   bottom: -10%;
   border-radius: 50%;
   backdrop-filter: blur(200px);
-}
-
-html {
-  font-family: "Ubuntu", sans-serif;
-  height: 100%;
-  --radius: 35px;
-  font-size: 62.5%;
-  --marginSmall: 1rem;
-  --marginMedium: 1.8rem;
-  --marginLarge: 2.5rem;
-  --marginXLarge: 3.5rem;
-  --marginXXLarge: 4.5rem;
-  --paddingSmall: 1rem;
-  --paddingMedium: 1.8rem;
-  --paddingLarge: 2.5rem;
-  --paddingXLarge: 3.5rem;
-  --paddingXXLarge: 4.5rem;
-  --clrPara: rgb(74, 108, 146);
-  --bgGradient: linear-gradient(
-    90deg,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  );
 }
 
 *,
@@ -71,7 +76,7 @@ body {
   position: relative;
   display: flex;
   width: 1000px;
-  height: 80vh;
+  height: 90vh;
   background: rgba(255, 255, 255, 0.281);
   backdrop-filter: blur(500px);
   border-radius: var(--radius);
@@ -129,10 +134,12 @@ body {
   width: 80%;
   height: 150px;
   background: var(--bgGradient);
-  margin-bottom: var(--marginXXLarge);
+  opacity: 0.75;
+  margin-bottom: 11rem;
   border-radius: var(--radius);
   display: flex;
-  padding: var(--paddingLarge) auto;
+  backdrop-filter: blur(400px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
 }
 
 .container aside .advert h3 {
@@ -153,47 +160,147 @@ body {
 
 .container .main {
   background-color: none !important;
+  position: relative;
   width: 100%;
+  height: 100%;
 }
 
-.container .main .main-header {
-  background-color: rgba(255, 28, 28, 0.034);
-  height: 25%;
+.container .main-header {
+  position: relative;
+  height: 30%;
 }
 
-.container .main .gameslist {
+.container .main-header .main-header-content {
+  position: absolute;
+  left: var(--paddingXXXLarge);
+  top: 6rem;
+  width: 40%;
+}
+
+.container .main-header .main-header-content h1 {
+  color: var(--clrH1);
+  letter-spacing: 0.1rem;
+  font-size: 4rem;
+  margin-bottom: var(--marginXXLarge);
+}
+
+.container .main-header .main-header-content .search-container {
+  position: relative;
+  width: 90%;
+}
+
+.container .main-header .main-header-content .search-container .search-box {
+  background: rgba(255, 255, 255, 0.432);
+  height: 4rem;
+  backdrop-filter: blur(300px);
+  border-radius: var(--radius);
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 5rem 0 3rem;
+  color: var(--clrPara);
+}
+
+.container .main-header .main-header-content .search-container i {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--clrPara);
+}
+
+.container .gameslist {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  background-color: none !important;
+  align-items: flex-start;
   position: absolute;
   bottom: 0;
-  right: 0;
-  width: 74%;
-  height: 75%;
-  padding-top: 6rem;
+  left: 0;
+  height: 70%;
+  padding-top: var(----paddingMedium);
+  padding-bottom: 10rem;
+  width: 100%;
 }
 
-.container .main .gameslist .game {
-  margin: 0 auto;
-  border-radius: 20px;
-  background-color: #fff;
-  height: 100px;
-  width: 500px;
+.container .gameslist .game {
+  margin-left: var(--marginXXXLarge);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.726);
+  backdrop-filter: blur(300px);
+  height: 110px;
+  width: 600px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
 }
 
-.container .main .gameslist .game img {
+.container .gameslist .game img {
   width: 80px;
   height: 80px;
+  margin: auto 0;
+  margin-left: var(--marginLarge);
 }
 
-.container .main .gameslist .game .completion {
+.container .gameslist .game .stats {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: var(--marginSmall) 0;
+}
+
+.container .gameslist .game .stats h3 {
+  color: var(--clrH3);
+}
+
+.container .gameslist .game .stats p {
+  color: var(--clrPara);
+}
+
+.container .gameslist .game .stats .completion {
   width: 100%;
-  background: rgba(255, 192, 203, 0.363);
+  background: rgba(190, 190, 190, 0.363);
   height: 30px;
+  border-radius: var(--radius);
+}
+
+.container .gameslist .game .stats .assassin::before {
+  content: " ";
+  display: block;
+  width: 55%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--clrHighlight);
+}
+
+.container .gameslist .game .stats .spiderman::before {
+  content: " ";
+  display: block;
+  width: 35%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--clrHighlight);
+}
+
+.container .gameslist .game .stats .sackboy::before {
+  content: " ";
+  display: block;
+  width: 85%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--clrHighlight);
+}
+
+.container .percentage {
+  display: grid;
+  place-items: center;
+  margin-right: var(--marginLarge);
+  color: var(--clrHighlight);
 }
 /*# sourceMappingURL=main.css.map */

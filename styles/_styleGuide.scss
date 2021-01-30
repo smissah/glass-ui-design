@@ -1,3 +1,45 @@
+html {
+  font-family: "Ubuntu", sans-serif;
+  height: 100%;
+  --radius: 35px;
+  font-size: 62.5%;
+
+  //!margins
+
+  --marginSmall: 1rem;
+  --marginMedium: 1.8rem;
+  --marginLarge: 2.5rem;
+  --marginXLarge: 3.5rem;
+  --marginXXLarge: 4.5rem;
+  --paddingXXXLarge: 6.5rem;
+
+  //!paddings
+
+  --paddingSmall: 1rem;
+  --paddingMedium: 1.8rem;
+  --paddingLarge: 2.5rem;
+  --paddingXLarge: 3.5rem;
+  --paddingXXLarge: 4.5rem;
+  --marginXXXLarge: 6.5rem;
+
+  //!colours
+  --clrPara: rgb(102, 138, 180);
+  --clrH1: rgb(68, 95, 124);
+  --clrH3: rgb(68, 95, 124);
+
+  --clrHighlight: rgb(107, 171, 197);
+
+  --bgGradient: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+@mixin boxShadow {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+}
+
 .circle:nth-child(1) {
   position: absolute;
   z-index: -1000;
