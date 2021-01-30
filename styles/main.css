@@ -80,7 +80,7 @@ body {
   background: rgba(255, 255, 255, 0.281);
   backdrop-filter: blur(500px);
   border-radius: var(--radius);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
 }
 
 .container aside {
@@ -126,8 +126,15 @@ body {
 }
 
 .container aside .menu li {
+  padding: 0.5rem;
+  width: 100%;
   display: flex;
   padding-bottom: var(--paddingXLarge);
+  transition: all 0.25s ease-in-out;
+}
+
+.container aside .menu li:hover {
+  transform: scale(1.05);
 }
 
 .container aside .menu li img {
@@ -144,7 +151,12 @@ body {
   border-radius: var(--radius);
   display: flex;
   backdrop-filter: blur(400px);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+  transition: all 0.25s ease-in-out;
+}
+
+.container aside .advert:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
+  transform: scale(1.01);
 }
 
 .container aside .advert h3 {
@@ -204,6 +216,16 @@ body {
   border: none;
   padding: 0 5rem 0 3rem;
   color: var(--clrPara);
+  transition: all 0.25s ease-in-out;
+  font-weight: bold;
+}
+
+.container .main-header .main-header-content .search-container .search-box:hover {
+  border: solid 0.5px white;
+}
+
+.container .main-header .main-header-content .search-container .search-box:focus {
+  background: rgba(233, 233, 233, 0.432);
 }
 
 .container .main-header .main-header-content .search-container i {
@@ -229,7 +251,7 @@ body {
 }
 
 .container .gameslist .game {
-  margin-left: var(--marginXXXLarge);
+  margin: 0 var(--marginXXXLarge);
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.726);
   backdrop-filter: blur(300px);
@@ -239,7 +261,12 @@ body {
   justify-content: space-between;
   margin-top: 5rem;
   margin-bottom: 1rem;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+.container .gameslist .game:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
 }
 
 .container .gameslist .game img {
