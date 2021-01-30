@@ -23,7 +23,8 @@ body {
 .container {
   position: relative;
   display: flex;
-  width: 1000px;
+  // width: 1000px;
+  width: 70vw;
   height: 90vh;
   background: rgba(255, 255, 255, 0.281);
   backdrop-filter: blur(500px);
@@ -94,7 +95,8 @@ body {
       height: 150px;
       background: var(--bgGradient);
       opacity: 0.75;
-      margin-bottom: 11rem;
+      // margin-bottom: 11rem;
+      margin-bottom: var(--marginMedium);
       border-radius: var(--radius);
       display: flex;
       backdrop-filter: blur(400px);
@@ -166,6 +168,7 @@ body {
           color: var(--clrPara);
           transition: all 0.25s ease-in-out;
           font-weight: bold;
+
           &:hover {
             // @include boxShadow;
             border: solid 0.5px white;
@@ -195,7 +198,7 @@ body {
     left: 0;
     height: 70%;
     padding-top: var(----paddingMedium);
-    padding-bottom: 10rem;
+    // padding-bottom: 10rem;
     width: 100%;
     //   width: 75%;
     // height: 100%;
